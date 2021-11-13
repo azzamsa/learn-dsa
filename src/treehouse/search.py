@@ -1,4 +1,7 @@
-def linear_search(numbers, target):
+from typing import Optional
+
+
+def linear_search(numbers: list[int], target: int) -> Optional[int]:
     """Search a target from the input using linear search algorithm"""
     for index, value in enumerate(numbers):
         if value == target:
@@ -6,7 +9,7 @@ def linear_search(numbers, target):
     return None
 
 
-def binary_search(numbers, target):
+def binary_search(numbers: list[int], target: int) -> Optional[int]:
     """Search a target from the input using binary search algorithm"""
     first_index = 0
     last_index = len(numbers) - 1
