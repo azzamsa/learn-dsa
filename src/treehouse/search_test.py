@@ -1,4 +1,4 @@
-from teamtreehouse.linear_search import linear_search
+from treehouse.search import linear_search
 
 
 def test_linear_search():
