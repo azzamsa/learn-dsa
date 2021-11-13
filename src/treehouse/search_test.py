@@ -2,14 +2,15 @@ from treehouse.search import linear_search
 
 
 def test_linear_search():
-    input_ = list(range(10))
-    assert linear_search(input_, 11) is None
+    # `range()` is exclusive!
+    numbers = list(range(1, 11))
+    assert linear_search(numbers, 11) is None
 
-    input_ = list(range(10))
-    assert linear_search(input_, 3) == 3
+    numbers = list(range(1, 11))
+    assert linear_search(numbers, 3) == 2
 
-    input_ = list(range(10))
-    assert linear_search(input_, 5) == 5
+    numbers = list(range(1, 11))
+    assert linear_search(numbers, 6) == 5
 
-    input_ = list(range(100))
-    assert linear_search(input_, 50) == 50
+    numbers = list(range(1, 101))
+    assert linear_search(numbers, 50) == 49
