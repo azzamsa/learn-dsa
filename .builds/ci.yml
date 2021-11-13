@@ -18,8 +18,8 @@ tasks:
       sudo add-apt-repository ppa:deadsnakes/ppa
       sudo apt update
       # build fails without `python3-distutils`
-      sudo apt-get install -y python3.8 python3.8-distutils
       sudo apt-get install -y python3.9 python3.9-distutils
+      sudo apt-get install -y python3.10 python3.10-distutils
 
       python3 -m pip install --user nox==2021.10.1
       # make the path persists in the next step
