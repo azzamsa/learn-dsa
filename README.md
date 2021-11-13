@@ -8,7 +8,7 @@
 
   <a href="https://git.sr.ht/~azzamsa/learn-dsa">
     <img
-      src="https://img.shields.io/badge/Python-3.9%2B-blue"
+      src="https://img.shields.io/badge/Python-3.8%20%7C%203.9%2B-blue"
       alt="Python versions"
     />
   </a>

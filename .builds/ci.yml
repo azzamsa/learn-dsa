@@ -14,15 +14,12 @@ tasks:
   - setup: |
       cd ${project}
 
-      # activate venv
-      VIRTUAL_ENV=venv
-      python3 -m venv $VIRTUAL_ENV
-      PATH="$VIRTUAL_ENV/bin:$PATH"
-
-      pip3 install -r requirements.txt
+      python3 -m pip install --user nox==2021.10.1
+      # make the path persists in the next step
+      echo export PATH="$HOME/.local/bin:$PATH" >> ~/.buildenv
 
   - lint: |
       cd ${project}
 
-      ./scripts/make is_verified
+      nox
 
