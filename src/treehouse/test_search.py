@@ -1,21 +1,17 @@
 from treehouse.search import linear_search, binary_search
 
-# `range()` is exclusive!
-numbers1 = list(range(1, 11))
-numbers2 = list(range(1, 11))
-numbers3 = list(range(1, 11))
-numbers4 = list(range(1, 101))
+numbers = [0, 5, 7, 10, 15]
 
 
 def test_linear_search():
-    assert linear_search(numbers1, 11) is None
-    assert linear_search(numbers2, 3) == 2
-    assert linear_search(numbers3, 6) == 5
-    assert linear_search(numbers4, 50) == 49
+    assert linear_search(numbers, 0) == 0
+    assert linear_search(numbers, 15) == 4
+    assert linear_search(numbers, 5) == 1
+    assert linear_search(numbers, 6) is None
 
 
 def test_binary_search():
-    assert binary_search(numbers1, 11) is None
-    assert binary_search(numbers2, 3) == 2
-    assert binary_search(numbers3, 6) == 5
-    assert binary_search(numbers4, 50) == 49
+    assert binary_search(numbers, 0) == 0
+    assert binary_search(numbers, 15) == 4
+    assert binary_search(numbers, 5) == 1
+    assert binary_search(numbers, 6) is None
