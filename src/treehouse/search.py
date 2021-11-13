@@ -2,7 +2,12 @@ from typing import Optional
 
 
 def linear_search(numbers: list[int], target: int) -> Optional[int]:
-    """Search a target from the input using linear search algorithm"""
+    """Search a target from the input using linear search algorithm
+
+    :param numbers: a collection with comparable items (not required to be sorted)
+    :param target: item value to search
+    :return: index of found item or None if item is not found
+    """
     for index, value in enumerate(numbers):
         if value == target:
             return index
@@ -10,7 +15,12 @@ def linear_search(numbers: list[int], target: int) -> Optional[int]:
 
 
 def binary_search(numbers: list[int], target: int) -> Optional[int]:
-    """Search a target from the input using binary search algorithm"""
+    """Search a target from the input using binary search algorithm
+
+    :param numbers: a collection with comparable items (must be sorted)
+    :param target: item value to search
+    :return: index of found item or None if item is not found
+    """
     first_index = 0
     last_index = len(numbers) - 1
 
