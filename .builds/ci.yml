@@ -30,5 +30,15 @@ tasks:
   - lint: |
       cd ${project}
 
-      nox
+      nox -s lint
+
+  - test: |
+      cd ${project}
+
+      nox -s test
+
+  - coverage: |
+      cd ${project}
+
+      nox -s coverage
 
