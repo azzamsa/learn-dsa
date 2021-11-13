@@ -24,6 +24,10 @@ verify () {
     echo "::: Is all test passed"
     pytest src/
 
+    echo "::: Is all lines covered"
+    coverage run -m pytest src/
+    coverage report -m
+
 }
 
 is_verified () {
