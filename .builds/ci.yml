@@ -1,8 +1,11 @@
-image: alpine/3.14
+image: ubuntu/18.04
 
+# build fails without `python3-distutils`
 packages:
+  - software-properties-common
   - python3
-  - py3-pip
+  - python3-pip
+  - python3-distutils
 
 sources:
   - https://git.sr.ht/~azzamsa/learn-dsa
@@ -13,6 +16,12 @@ environment:
 tasks:
   - setup: |
       cd ${project}
+
+
+      sudo add-apt-repository ppa:deadsnakes/ppa
+      sudo apt update
+      sudo apt install -y python3.8 python3.8-distutils
+      sudo apt install -y python3.9 python3.9-distutils
 
       python3 -m pip install --user nox==2021.10.1
       # make the path persists in the next step
