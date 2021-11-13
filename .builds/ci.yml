@@ -1,0 +1,28 @@
+image: alpine/3.14
+
+packages:
+  - python3
+  - py3-pip
+
+sources:
+  - https://git.sr.ht/~azzamsa/learn-dsa
+
+environment:
+  project: learn-dsa
+
+tasks:
+  - setup: |
+      cd ${project}
+
+      # activate venv
+      VIRTUAL_ENV=venv
+      python3 -m venv $VIRTUAL_ENV
+      PATH="$VIRTUAL_ENV/bin:$PATH"
+
+      pip3 install -r requirements.txt
+
+  - lint: |
+      cd ${project}
+
+      ./scripts/make is_verified
+

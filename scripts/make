@@ -18,22 +18,23 @@ verify () {
     echo "::: Format with black"
     black src/
 
-    echo "::: Lint with flake8"
-    flake8 --config src/setup.cfg src/
+    echo "::: Lint with pylint"
+    pylint src/
 
-    echo "::: Sort import with isort"
-    isort --settings-path src/setup.cfg src/
+    echo "::: Is all test passed"
+    pytest src/
+
 }
 
 is_verified () {
     echo "::: Is formatted with black"
     black --check src/
 
-    echo "::: Is linted with flake8"
-    flake8 --config src/setup.cfg src/
+    echo "::: Is linted with pylint"
+    pylint src/
 
-    echo "::: Is sorted with isort"
-    isort --settings-path src/setup.cfg src/
+    echo "::: Is all test passed"
+    pytest src/
 
 }
 
