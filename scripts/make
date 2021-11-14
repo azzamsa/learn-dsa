@@ -15,29 +15,31 @@ EOF
 }
 
 verify () {
-    echo "::: Format with black"
+    echo "::: Format"
     black src/
 
-    echo "::: Lint with pylint"
+    echo "::: Lint"
     pylint src/
 
-    echo "::: Is all test passed"
+    echo "::: Test"
     pytest src/
+    mypy src/
 
-    echo "::: Is all lines covered"
+    echo "::: Count coverage"
     coverage run -m pytest src/
     coverage report -m
 
 }
 
 is_verified () {
-    echo "::: Is formatted with black"
+    echo "::: Formatting check"
     black --check src/
 
-    echo "::: Is linted with pylint"
+    echo "::: Linting check"
     pylint src/
+    mypy src/
 
-    echo "::: Is all test passed"
+    echo "::: Testing check"
     pytest src/
 
 }
