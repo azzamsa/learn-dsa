@@ -28,10 +28,11 @@ def binary_search(numbers: list[int], target: int) -> Optional[int]:
         mid_index = (last_index + first_index) // 2
 
         # best case
-        if numbers[mid_index] == target:
+        item = numbers[mid_index]
+        if item == target:
             return mid_index
 
-        if numbers[mid_index] < target:
+        if item < target:
             # discard all numbers BEFORE mid_index
             first_index = mid_index + 1
         else:
