@@ -2,11 +2,11 @@
 
   <h1>Learn Data Structure and Algorithm</h1>
 
-  <a href="https://builds.sr.ht/~azzamsa/learn-dsa?">
-    <img src="https://builds.sr.ht/~azzamsa/learn-dsa.svg" alt="Build status" />
+  <a href="https://github.com/azzamsa/learn-dsa/workflows/ci.yml">
+    <img src="https://github.com/azzamsa/learn-dsa/workflows/ci/badge.svg" alt="Build status" />
   </a>
 
-  <a href="https://git.sr.ht/~azzamsa/learn-dsa">
+  <a href="https://github.com/azzamsa/learn-dsa">
     <img
       src="https://img.shields.io/badge/Python-3.9%20%7C%203.10%2B-blue"
       alt="Python versions"
